@@ -1,0 +1,16 @@
+.button-menu::before {
+	content: "";
+	position: absolute;
+	height: 150px;
+	width: 50px;
+	background: #fff;
+	left: -55px;
+	top: -40px;
+	transform: rotate(37deg);
+	transition: all 0.3s;
+	opacity: 0.3;
+}
+
+.button-menu:hover::before {
+	left: 95%;
+}
