@@ -55,7 +55,7 @@ export const Header = () => {
 						className={`items-center justify-between ${!showMenu && "hidden"} w-full md:flex md:w-auto md:order-1`}
 						id="navbar-sticky"
 					>
-						<ul className="max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50/30 md:text-sm text-center md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+						<ul className="max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50/30 text-sm md:text-lg md:text-shadow-lg md:font-semibold text-center md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
 							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/"

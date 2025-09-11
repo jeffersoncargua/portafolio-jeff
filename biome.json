@@ -18,6 +18,9 @@
 			"recommended": true,
 			"correctness":{
 				"useUniqueElementIds": "off"
+			},
+			"a11y":{
+				"noSvgWithoutTitle":"off"
 			}
 		}
 	},
