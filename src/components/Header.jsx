@@ -7,8 +7,8 @@ export const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
-		<div className="w-[90%] relative container mx-auto p-5 mb-10">
-			<nav className="bg-transparent dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
+		<div className="w-[90%] relative container mx-auto md:p-5">
+			<nav className="bg-transparent dark:bg-gray-900 md:absolute w-full z-20 top-0 start-0">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
 					<div className="flex w-full justify-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
 						<div className="w-full flex justify-center" id="button-menu">
@@ -55,8 +55,8 @@ export const Header = () => {
 						className={`items-center justify-between ${!showMenu && "hidden"} w-full md:flex md:w-auto md:order-1`}
 						id="navbar-sticky"
 					>
-						<ul className="max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50/30 md:text-sm md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:text-center max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-500 md:duration-500 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+						<ul className="max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50/30 md:text-sm text-center md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/"
 									onClick={() => setShowMenu(!showMenu)}
@@ -66,7 +66,7 @@ export const Header = () => {
 									Sobre mi
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:text-center max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-500 md:duration-500 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/skills"
 									onClick={() => setShowMenu(!showMenu)}
@@ -76,7 +76,7 @@ export const Header = () => {
 									Mis Habilidades
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:text-center max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-500 md:duration-500 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/projects"
 									onClick={() => setShowMenu(!showMenu)}
@@ -86,7 +86,7 @@ export const Header = () => {
 									Mis Proyectos
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:text-center max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-500 md:duration-500 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/contact"
 									onClick={() => setShowMenu(!showMenu)}
