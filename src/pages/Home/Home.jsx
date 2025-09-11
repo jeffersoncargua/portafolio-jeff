@@ -5,7 +5,7 @@ export const Home = () => {
 	return (
 		<div className="w-[90%] flex flex-col justify-center items-center gap-y-2 md:gap-y-10 min-h-full mx-auto md:mt-10">
 			<div className="my-10" >
-				<label className='text-2xl md:text-5xl font-bold text-center'>
+				<label htmlFor='Welcome' className='text-2xl md:text-5xl font-bold text-center'>
 					<TypewriterComponent
 						options={
 							{
