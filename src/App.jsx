@@ -1,8 +1,13 @@
 import { Header } from "./components";
 import { AllRoutes } from "./routes/AllRoutes";
 import { useEffect, useMemo, useState } from "react";
+// Librerias necesarias para utilizar el fondo de pantalla con particulas
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+// Librerias necesarias para utilizar AOS que permite realizar efectos de scroll cuando 
+// se nevega por la la ventana del sitio web. Nota: se recomienda revisar el sitio oficial https://github.com/michalsnik/aos
+import Aos from "aos";
+import '../node_modules/aos/dist/aos.css';
 
 import "./App.css";
 
@@ -18,6 +23,21 @@ function App() {
 			setInit(true);
 		});
 	}, []);
+
+	useEffect(() => {
+		Aos.init({
+			disable: false,
+			startEvent: 'DOMContentLoaded',
+			initClassName: 'aos-init',
+			animatedClassName: 'aos-animate',
+			useClassNames: false,
+			disableMutationObserver: false,
+			debounceDelay: 50,
+			throttleDelay: 99,
+		});
+		Aos.refresh();
+	}, [])
+	
 
 	const particlesLoaded = (container) => {
 		console.log(container);
