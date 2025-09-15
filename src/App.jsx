@@ -4,14 +4,12 @@ import { useEffect, useMemo, useState } from "react";
 // Librerias necesarias para utilizar el fondo de pantalla con particulas
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-// Librerias necesarias para utilizar AOS que permite realizar efectos de scroll cuando 
+// Librerias necesarias para utilizar AOS que permite realizar efectos de scroll cuando
 // se nevega por la la ventana del sitio web. Nota: se recomienda revisar el sitio oficial https://github.com/michalsnik/aos
 import Aos from "aos";
-import '../node_modules/aos/dist/aos.css';
+import "../node_modules/aos/dist/aos.css";
 
 import "./App.css";
-
-
 
 function App() {
 	const [init, setInit] = useState(false);
@@ -27,17 +25,16 @@ function App() {
 	useEffect(() => {
 		Aos.init({
 			disable: false,
-			startEvent: 'DOMContentLoaded',
-			initClassName: 'aos-init',
-			animatedClassName: 'aos-animate',
+			startEvent: "DOMContentLoaded",
+			initClassName: "aos-init",
+			animatedClassName: "aos-animate",
 			useClassNames: false,
 			disableMutationObserver: false,
 			debounceDelay: 50,
 			throttleDelay: 99,
 		});
 		Aos.refresh();
-	}, [])
-	
+	}, []);
 
 	const particlesLoaded = (container) => {
 		console.log(container);
@@ -132,12 +129,11 @@ function App() {
 
 export default App;
 
-
 /**
  * Para utilizar tsParticules se debe revisar la documentacion de https://github.com/tsparticles/react, donde se detalla
- * el proceso que se debe seguir e instalar las dependencias necesarias para que el efecto de las particulas funcione 
+ * el proceso que se debe seguir e instalar las dependencias necesarias para que el efecto de las particulas funcione
  * correctamente
- * 
- * También se recomienda trabajar con z-index para que los objetos queden visibles y no se pongan por detras del efecto de 
+ *
+ * También se recomienda trabajar con z-index para que los objetos queden visibles y no se pongan por detras del efecto de
  * las particulas
  */

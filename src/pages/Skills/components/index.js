@@ -1,1 +1,1 @@
-export { AcordionItem } from './AcordionItem';
+export { AcordionItem } from "./AcordionItem";
