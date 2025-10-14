@@ -7,7 +7,7 @@ export const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
-		<div className="w-[90%] relative container mx-auto md:p-5">
+		<div className="w-[90%] relative container mx-auto md:p-5 md:mb-20">
 			<nav className="bg-transparent dark:bg-gray-900 md:absolute w-full z-20 top-0 start-0">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
 					<div className="flex w-full justify-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">

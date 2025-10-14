@@ -113,7 +113,7 @@ function App() {
 
 	return (
 		//<main className="App container bg-linear-to-t from-sky-500 to-indigo-500">
-		<main className="App container ">
+		<main className="App container">
 			{init && (
 				<Particles
 					id="tsparticles"
