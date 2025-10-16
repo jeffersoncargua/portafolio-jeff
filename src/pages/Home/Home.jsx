@@ -25,7 +25,8 @@ export const Home = () => {
 					/>
 				</label>
 			</div>
-			<div className="w-full realtive flex flex-wrap md:flex-nowrap justify-center items-center mx-auto mb-10">
+			{/* <div className="w-full h-full realtive flex flex-wrap md:flex-nowrap justify-center items-center mx-auto mb-10"> */}
+			<div className="w-full h-full realtive flex flex-wrap md:space-x-10 justify-center items-center mx-auto mb-10">
 				<Photo />
 				<Information />
 			</div>
