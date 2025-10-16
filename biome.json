@@ -17,7 +17,8 @@
 		"rules": {
 			"recommended": true,
 			"correctness":{
-				"useUniqueElementIds": "off"
+				"useUniqueElementIds": "off",
+				"useHookAtTopLevel": "off"
 			},
 			"a11y":{
 				"noSvgWithoutTitle":"off"

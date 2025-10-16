@@ -1,14 +1,14 @@
+import copy from "copy-to-clipboard";
 import { useCallback, useRef, useState } from "react";
-import { Tooltip as ReactToolTip } from "react-tooltip";
-import Whatasapp from "../../../assets/WhatsappQR.png";
 // Librerias necesarias para activar el toast y copiar texto de un elemento html(input) paa este caso
 import { toast } from "react-toastify";
-import copy from "copy-to-clipboard";
+import { Tooltip as ReactToolTip } from "react-tooltip";
+import Whatasapp from "../../../assets/WhatsappQR.png";
 
 export const IconsContact = ({ iconType, color = "" }) => {
 	const [isClick, setIsClick] = useState(false);
 	const textRef = useRef();
-  //transition delay-300 duration-700 easi-in-out ${!isClick ? "md:hover:animate-bounce" : "animate-none"}
+	//transition delay-300 duration-700 easi-in-out ${!isClick ? "md:hover:animate-bounce" : "animate-none"}
 	const icons = {
 		facebook: (
 			<svg
@@ -56,17 +56,21 @@ export const IconsContact = ({ iconType, color = "" }) => {
 	};
 
 	const messageToolTip = {
-		facebook: "Haz clic en el icono para direccionarte a mi perfil de Facebook.",
+		facebook:
+			"Haz clic en el icono para direccionarte a mi perfil de Facebook.",
 		gmail: "Haz clic en el icono para copiar mi correo electrónico.",
-		linkedin: "Haz clic en el icono para direccionarte a mi perfil de Linkedin.",
+		linkedin:
+			"Haz clic en el icono para direccionarte a mi perfil de Linkedin.",
 		whatsapp: "Haz clic en el icono para direccionarte a WhatsApp Web.",
 	};
 
 	//Mensajes que se muestran cuando son pantallas pequeñas
 	const messageToolTipSmall = {
-		facebook: "Presiona dos veces el botón para direccionarte a mi perfil de Facebook.",
+		facebook:
+			"Presiona dos veces el botón para direccionarte a mi perfil de Facebook.",
 		gmail: "Presiona dos veces el botón para copiar mi correo electrónico.",
-		linkedin: "Presiona dos veces el botón para direccionarte a mi perfil de Linkedin.",
+		linkedin:
+			"Presiona dos veces el botón para direccionarte a mi perfil de Linkedin.",
 		whatsapp: "Presiona dos veces el botón para direccionarte a mi WhatsApp.",
 	};
 
@@ -77,18 +81,18 @@ export const IconsContact = ({ iconType, color = "" }) => {
 		whatsapp: "https://wa.me/593992649161",
 	};
 
-  //HandleCopy es la funcion que permite copiar el texto del correo electronico del input con ref
-  const HandleCopy = useCallback(() => {
+	//HandleCopy es la funcion que permite copiar el texto del correo electronico del input con ref
+	const HandleCopy = useCallback(() => {
 		const copyText = textRef.current.value;
 		const isCopy = copy(copyText);
 		if (isCopy) {
 			toast.success("Se copió el correo electrónico");
 		}
-	},[]);
+	}, []);
 
-  // HandleClick permite cambiar el estado del boton para que se pueda leer el mensaje de entrada o se 
-  // pueda leer el mensaje luego de dar clic para realizar otra operacion. Tambien, una vez que se active 
-  // el boton este podra redireccionar a la pagina segun corresponda al icono que presione el usuario
+	// HandleClick permite cambiar el estado del boton para que se pueda leer el mensaje de entrada o se
+	// pueda leer el mensaje luego de dar clic para realizar otra operacion. Tambien, una vez que se active
+	// el boton este podra redireccionar a la pagina segun corresponda al icono que presione el usuario
 	const HandleClick = useCallback(() => {
 		if (isClick) {
 			iconType !== "gmail" && window.open(url[iconType], "_blanck");
@@ -97,8 +101,7 @@ export const IconsContact = ({ iconType, color = "" }) => {
 		} else {
 			setIsClick(!isClick);
 		}
-	},[isClick,iconType,HandleCopy]);
-
+	}, [isClick, iconType, HandleCopy]);
 
 	return (
 		<div className="z-20 group">
@@ -114,10 +117,18 @@ export const IconsContact = ({ iconType, color = "" }) => {
 			</button>
 			{/**Esta seccion es para pantallas grandes */}
 			<div className="hidden md:block">
-				<ReactToolTip id={`${iconType}`} place='top' style={{backgroundColor:"rgba(171, 247, 244, 0.7)", color: "#222" }} >
-					{!isClick
-						? (<span className="hidden md:block">Haz clic para detener el icono</span>)
-						: `${messageToolTip[iconType]}`}
+				<ReactToolTip
+					id={`${iconType}`}
+					place="top"
+					style={{ backgroundColor: "rgba(171, 247, 244, 0.7)", color: "#222" }}
+				>
+					{!isClick ? (
+						<span className="hidden md:block">
+							Haz clic para detener el icono
+						</span>
+					) : (
+						`${messageToolTip[iconType]}`
+					)}
 					{iconType === "whatsapp" && isClick && (
 						<img
 							src={Whatasapp}
@@ -139,8 +150,14 @@ export const IconsContact = ({ iconType, color = "" }) => {
 			</div>
 			{/**Esta seccion es para pantallas pequeñas */}
 			<div className="block md:hidden">
-				<ReactToolTip id={`${iconType}`} place='top' style={{backgroundColor:"rgba(171, 247, 244, 0.7)", color: "#222" }} >
-					<span className="flex w-32 p-2 text-justify">{messageToolTipSmall[iconType]}</span>
+				<ReactToolTip
+					id={`${iconType}`}
+					place="top"
+					style={{ backgroundColor: "rgba(171, 247, 244, 0.7)", color: "#222" }}
+				>
+					<span className="flex w-32 p-2 text-justify">
+						{messageToolTipSmall[iconType]}
+					</span>
 					{iconType === "gmail" && isClick && (
 						<input
 							type="text"
@@ -153,16 +170,12 @@ export const IconsContact = ({ iconType, color = "" }) => {
 					)}
 				</ReactToolTip>
 			</div>
-
-			
-			
 		</div>
 	);
 };
 
-
 /**
- * Nota importante: para resolver los saltos infinitos con la animacion: animate-bounce, se debe emplear el 'group' 
+ * Nota importante: para resolver los saltos infinitos con la animacion: animate-bounce, se debe emplear el 'group'
  * para que el elemento padre pueda controlar los efectos o animaciones de los elementos hijos, en este caso los iconos
  * de las redes sociales que se estan implementtando
  */

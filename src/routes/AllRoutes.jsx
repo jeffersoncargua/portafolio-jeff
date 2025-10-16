@@ -1,5 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import { Contact, Home, PageNotFound, ProjectDetail, Projects, Skills } from "../pages";
+import {
+	Contact,
+	Home,
+	PageNotFound,
+	ProjectDetail,
+	Projects,
+	Skills,
+} from "../pages";
 
 export const AllRoutes = () => {
 	return (

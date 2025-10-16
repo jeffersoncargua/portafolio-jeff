@@ -1,0 +1,146 @@
+[
+	{
+		"id": 1,
+		"title": "Capernova",
+		"image": "https://lh3.googleusercontent.com/d/1BJCoQc_3y-NGyPIgscO8YQVm_AKnnrs9?authuser=0",
+		"link": "https://capernovademo.netlify.app/",
+		"description": "Plataforma de Ventas online y Capacitación para emprendedores.",
+		"resumen": "Desarrollé una aplicación para la venta de cursos y productos con React JS y .Net 8. La aplicación permite adquirir cursos, así como productos cosméticos y de belleza, empleando métodos de pago como PayPal, tarjeta de crédito o débito y transferencia. La aplicación permite tener roles de usuario como Secretaría, Administrador, Profesor y Estudiante, y cada uno tiene su sistema de gestión. La aplicación permite a los usuarios registrarse para comprar cursos y posteriormente acceder a sus cursos para visualizar el material audiovisual, realizar tareas, rendir pruebas y mantener clases virtuales.",
+		"tecnology": [
+			"SQL Server",
+			"Visual Studio Code + React JS",
+			"Visual Studio + C# + .Net 8",
+			"Tailwind CSS",
+			"Arquitectura hexagonal",
+			"Jira Gestión de Proyectos SCRUM",
+			"Github",
+			"Github Actions (Despliegue)"
+		],
+		"challenge": [
+			"Diseño responsivo",
+			"Integración de un carrito de compras",
+			"Método de pago con Paypal y tarjeta",
+			"Confirmación de correo electrónico de los usuarios",
+			"Estructuración base de datos",
+			"Gestión de la información de los cursos y productos",
+			"Gestión de la informacion de usuarios",
+			"Gestión de los requerimientos de los roles de usuario",
+			"Gestión y almacenamiento de recursos y archivos",
+			"Reproductor de videos",
+			"Inscripción de cursos",
+			"Entrega de certificados automáticamente al finalizar el curso"
+		],
+		"goals": [
+			"Implementación de los puntos de ruptura de Tailwind",
+			"Integración de redux y sus mecanismos para mantener la información del carrito de compras hasta el procesamiento del pago",
+			"Integración de las apis de Paypal como plataforma de procesamientos de pago",
+			"Integración de los servicios de Gmail para envio del enlace de confirmación",
+			"Integración de base de datos en SQL con Entity Framework Core",
+			"Integración de base de datos relacionales",
+			"Implementación de Identity para la gestión de los datos de usuario",
+			"Integracion del api de Google Drive para la gestión de los recursos y archivos",
+			"Desarrollo de páginas exclusivas para las diferentes funcionalidades de cada rol de usuario",
+			"Implementación de la librería de react-player para reproducir videos",
+			"Generación de End-Points para inscribir automáticamente después del procesamiento válido del pago",
+			"Implementacion de una pagina exclusiva para visualizar los avances del curso y la descarga del certificado, por código QR o link de descarga"
+		],
+		"repositoryBackEnd": "https://github.com/jeffersoncargua/Capernova-Back-Backup.git",
+		"repositoryFrontEnd": "https://github.com/jeffersoncargua/Capernova-Front-Backup.git"
+	},
+	{
+		"id": 2,
+		"title": "Calculadora de Matrícula y Aranceles",
+		"image": "https://lh3.googleusercontent.com/d/18RZhISZOOpCvbso80J89ygVW505nKTVE?authuser=0",
+		"link": "https://cobromatriculaepn.netlify.app/",
+		"description": "Sistema de cálculo del valor a pagar por concepto de matrícula en la EPN.",
+		"resumen": "Desarrollé un sistema web en React JS y .Net 8 para realizar cálculos del valor a pagar por concepto de pérdida de gratuidad en la matriculación de la EPN. La aplicación permite realizar consultas sobre el valor a cancelar por concepto de la matriculación, tanto en carreras de Ingeniería como de Tecnología. Los estudiantes de la EPN podrán consultar los valores a cancelar al ingresar las materias a cursar en primera, segunda y tercera matrícula. Se considera el cálculo de los valores a partir de los parámetros establecidos en la normativa vigente de la EPN. El sistema permite gestionar los valores de los parámetros para ejecutar cálculos precisos y correspondientes a la normativa de la EPN.",
+		"tecnology": [
+			"SQL Server",
+			"Visual Studio Code + React JS",
+			"Visual Studio + C# + .Net 8",
+			"Xunit Pruebas unitarias, integración y funcionales",
+			"Tailwind CSS",
+			"Arquitectura hexagonal",
+			"Jira Gestión de Proyectos SCRUM",
+			"Github ",
+			"Github Actions (Despliegue)"
+		],
+		"challenge": [
+			"Diseño Responsivo",
+			"Gestión de la información de los parámetros de la normativa de la EPN",
+			"Validación de la información entregada por los estudiantes de la EPN para realizar el cálculo",
+			"Presentar los cálculos con los valores precisos y en formato de matrícula ordinaria y extraordinaria"
+		],
+		"goals": [
+			"Implementación de los puntos de ruptura de Tailwind",
+			"Página que permite gestionar la informacion de los parámetros solo a usuario con rol de administrador y colaborador",
+			"Patrones de verificación (pattern) y uso de useForm para validar la información proporcionada por el usuario",
+			"End-points que verifican el tipo de régimen académico y quintiles para realizar los cálculos precisos de los valores a cancelar",
+			"Autenticación y autorización de los usuarios que pueden realizar la gestión de la información de los parámetros de la normativa de la EPN"
+		],
+		"repositoryFrontEnd": "https://github.com/jeffersoncargua/Cobro-Matricula-EPN.git",
+		"repositoryBackEnd": "https://github.com/jeffersoncargua/Cobro-Matricula-EPN.git"
+	},
+	{
+		"id": 3,
+		"title": "Cinema",
+		"image": "https://lh3.googleusercontent.com/d/18RZhISZOOpCvbso80J89ygVW505nKTVE?authuser=0",
+		"link": "https://cinema-project-jeffersoncargua.netlify.app/",
+		"description": "Sitio para ver la cartelera de películas actuales.",
+		"resumen": "Desarrollé un sitio web en React para observar las películas actuales que están en cartelera; en ella se realizó la categorización de las películas más vistas, las mejor ranqueadas y las que están en estreno",
+		"tecnology": [
+			"Visual Studio Code + React JS",
+			"Tailwind CSS",
+			"API The Movie Database"
+		],
+		"challenge": [
+			"Esquematizar las páginas para mostrar las películas de acuerdo con las listas de las más populares, mejor ranqueadas y las de estreno, y el detalle de la película ",
+			"Mostrar la información de las películas del API THE MOVIE Database",
+			"Personalizar los diseños y los temas de claro y oscuro del sitio web"
+		],
+		"goals": [
+			"Elaboración de un menú con las opciones de POPULARES, RANKING y UPCOMING, y desarrollo de una página para mostrar detalles de las películas",
+			"Integración del sitio web The Movie Database (TMDB) y solicitudes fetch para acceder a las películas según su especificación",
+			"Integración de las clases de Tailwind, así como la configuración de tailwind.config.js agregando darkMode, así como theme:extend"
+		],
+		"repositoryFrontEnd": "https://github.com/jeffersoncargua/cinemate.git",
+		"repositoryBackEnd": false
+	},
+	{
+		"id": 4,
+		"title": "Redux Cart",
+		"image": "https://lh3.googleusercontent.com/d/13csszjqdsz-2P6T6-X9cHLFvGcdhG8GX?authuser=0",
+		"link": "https://shopmate-redux-jeffcargua-ss.netlify.app/",
+		"description": "Demo de un carrito de compras con redux.",
+		"resumen": "Desarrollé un demo de un sitio web en React JS para simular un carrito de compras mediante el uso de la librería de Redux. Este sitio permite agregar artículos a un carrito virtual y visualizar los ítems elegidos y eliminarlos si así lo desea el usuario; también se puede observar el costo total y el costo por cada uno de los artículos",
+		"tecnology": ["Visual Studio Code + React JS", "Redux"],
+		"challenge": [
+			"Gestionar el carrito de compras y visualizar los costos de cada artículo y el pago total"
+		],
+		"goals": [
+			"Integración de Redux y sus mecanismos para almacenar la información del carrito de compras y mostrarla en la página exclusiva del carrito de compras"
+		],
+		"repositoryFrontEnd": "https://github.com/jeffersoncargua/shopmate-redux.git",
+		"repositoryBackEnd": false
+	},
+	{
+		"id": 5,
+		"title": "Calendario + Agenda de tareas y/o recordatorio",
+		"image": "https://lh3.googleusercontent.com/d/1shNxgaNOLPSb2xY8ofNxEET52UymJmIQ?authuser=0",
+		"link": "https://calendar-jeff-react.netlify.app/",
+		"description": "Demo de un sitio web para agendar tareas y/o recordatorios.",
+		"resumen": "Desarrollé un demo de un sitio web en React JS para simular un calendario que permite agendar tareas o recordatorios que el usuario desea especificar en una determinada fecha. El sitio permite visualizar un calendario donde se observa una estrella de color plomo que indica que no tiene agendadas tareas o un recordatorio y de color amarillo que indica que sí tiene agendada alguna tarea o recordatorio",
+		"tecnology": ["Visual Studio Code + React JS"],
+		"challenge": [
+			"Proporcionar un calendario del año vigente",
+			"Agregar un listado de tareas o recordatorios al escoger una fecha",
+			"Diferenciar entre una fecha agendada de una no agendada"
+		],
+		"goals": [
+			"Implementación de una función que permite generar un calendario del año vigente con las fechas",
+			"Almacenamiento de un listado de la fecha escogida en un array de JavaScript y uso del useState para manejar el estado"
+		],
+		"repositoryFrontEnd": "https://github.com/jeffersoncargua/calendar.git",
+		"repositoryBackEnd": false
+	}
+]
