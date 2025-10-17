@@ -6,7 +6,7 @@ export const Photo = () => {
 	return (
 		<div className="z-20 w-full h-full md:w-1/3 md:flex-1 flex justify-center items-center">
 			<ReactFlipCard
-				containerStyle={{ width: "100%", height: "100%"}}
+				containerStyle={{ width: "100%", height: "100%" }}
 				flipTrigger="onHover"
 				direction="horizontal"
 				frontComponent={

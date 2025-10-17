@@ -13,8 +13,8 @@ export const ProjectDetail = () => {
 		//setLoading(true);
 		const result = await useFetch();
 		if (result !== null) {
-			let response = result.find((item) => item.id === +params.id) 
-			if(response !== null){
+			const response = result.find((item) => item.id === +params.id);
+			if (response !== null) {
 				setProyecto(response);
 			}
 		}
@@ -27,7 +27,6 @@ export const ProjectDetail = () => {
 			setLoading(false);
 		}, 2500);
 		FetchData();
-
 	}, [FetchData]);
 
 	return (
@@ -54,7 +53,10 @@ export const ProjectDetail = () => {
 					</section>
 					{/* Aqui va las Tecnologias, Desafios y Entregables */}
 					<section className="w-[90%] h-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 z-40">
-						<CardProjectDetail title={"Herramientas de Desarrollo"} list={proyecto.tecnology} />
+						<CardProjectDetail
+							title={"Herramientas de Desarrollo"}
+							list={proyecto.tecnology}
+						/>
 						<CardProjectDetail title={"Desafíos"} list={proyecto.challenge} />
 						<CardProjectDetail title={"Resuelto con"} list={proyecto.goals} />
 					</section>
@@ -62,7 +64,9 @@ export const ProjectDetail = () => {
 						{proyecto.repositoryBackEnd && (
 							<button
 								type="button"
-								onClick={() => window.open(proyecto.repositoryBackEnd, "_blank")}
+								onClick={() =>
+									window.open(proyecto.repositoryBackEnd, "_blank")
+								}
 								className={`inline-flex items-center z-40 px-2.5 py-2 rounded-lg bg-white hover:bg-black hover:scale-110 focus:ring focus:ring-offset-1 focus:ring-gray-400 text-black hover:text-white hover:text-shadow-lg/10 hover:text-shadow-white mb-6`}
 							>
 								Ver Repositorio .Net
@@ -79,7 +83,9 @@ export const ProjectDetail = () => {
 						{proyecto.repositoryFrontEnd && (
 							<button
 								type="button"
-								onClick={() => window.open(proyecto.repositoryFrontEnd, "_blank")}
+								onClick={() =>
+									window.open(proyecto.repositoryFrontEnd, "_blank")
+								}
 								className={`inline-flex items-center z-40 px-2.5 py-2 rounded-lg bg-white hover:bg-black hover:scale-110 focus:ring focus:ring-offset-1 focus:ring-gray-400 text-black hover:text-white hover:text-shadow-lg/10 hover:text-shadow-white mb-6`}
 							>
 								Ver Repositorio React
@@ -93,7 +99,7 @@ export const ProjectDetail = () => {
 								</svg>
 							</button>
 						)}
-						
+
 						<button
 							type="button"
 							onClick={() => window.open(proyecto.link, "_blank")}

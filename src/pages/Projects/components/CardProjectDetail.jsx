@@ -46,16 +46,20 @@ export const CardProjectDetail = ({ title, list }) => {
 
 	return (
 		// <div className="w-[80%] md:w-[45%] lg:w-[30%] mx-auto border border-gray-900 p-4 rounded-lg bg-slate-50/50 text-xs sm:text-sm">
-		<div className={`w-full mx-auto border border-gray-900 p-4 rounded-lg bg-slate-50/50 text-xs sm:text-sm ${title === "Resuelto con" && 'md:col-start-1 md:col-end-3 lg:col-start-3 lg:col-end-4'}`}>
+		<div
+			className={`w-full mx-auto border border-gray-900 p-4 rounded-lg bg-slate-50/50 text-xs sm:text-sm ${title === "Resuelto con" && "md:col-start-1 md:col-end-3 lg:col-start-3 lg:col-end-4"}`}
+		>
 			<h3 className="font-semibold mb-2">{title} :</h3>
 			<ul className="flex flex-col space-y-2">
 				{list.map((item) => (
-					<li key={Math.random()} className="inline-flex items-center text-wrap">
+					<li
+						key={Math.random()}
+						className="inline-flex items-center text-wrap"
+					>
 						{svgIcon}
 						<span className="">{item}</span>
 					</li>
 				))}
-				
 			</ul>
 		</div>
 	);

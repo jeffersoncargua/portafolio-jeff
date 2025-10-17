@@ -9,7 +9,7 @@ export const Header = () => {
 	return (
 		<div className="w-[90%] relative container mx-auto md:p-5 md:mb-20">
 			<nav className="bg-transparent dark:bg-gray-900 md:absolute w-full z-20 top-0 start-0">
-				<div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+				<div className="relative max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
 					<div className="flex w-full justify-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
 						<div className="w-full flex justify-center" id="button-menu">
 							<button
@@ -42,7 +42,7 @@ export const Header = () => {
 										xmlns="http://www.w3.org/2000/svg"
 										aria-hidden="true"
 										fill="currentColor"
-										className="w-5 h-5 bi bi-x-lg transition hover:delay-150 hover:duration-150 hover:rotate-180 "
+										className="w-5 h-5 bi bi-x-lg transition hover:delay-75 hover:duration-150 hover:rotate-180 "
 										viewBox="0 0 16 16"
 									>
 										<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
@@ -52,21 +52,21 @@ export const Header = () => {
 						</div>
 					</div>
 					<div
-						className={`items-center justify-between ${!showMenu && "hidden"} w-full md:flex md:w-auto md:order-1`}
+						className={`items-center justify-between ${!showMenu ? "max-md:-translate-x-full" : "max-md:translate-x-0"} max-md:transition-transform max-md:fixed max-md:-top-5 max-md:left-0 max-md:z-50 w-full md:flex md:w-auto md:order-1 max-md:min-h-screen`}
 						id="navbar-sticky"
 					>
-						<ul className="max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50/30 text-sm md:text-lg md:text-shadow-lg md:font-semibold text-center md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+						<ul className="max-md:min-h-screen max-md:space-y-3 flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-slate-50 text-sm md:text-lg md:text-shadow-lg md:font-semibold max-md:text-start text-center md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/"
 									onClick={() => setShowMenu(!showMenu)}
-									className="block py-2 px-3 text-gray-900 bg-transparent md:px-4 md:py-3 dark:text-white dark:hover:text-white"
+									className="block py-2 px-3 text-gray-900 bg-transparent md:px-4 md:py-3"
 									viewTransition
 								>
 									Sobre mi
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/skills"
 									onClick={() => setShowMenu(!showMenu)}
@@ -76,7 +76,7 @@ export const Header = () => {
 									Mis Habilidades
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/projects"
 									onClick={() => setShowMenu(!showMenu)}
@@ -86,7 +86,7 @@ export const Header = () => {
 									Mis Proyectos
 								</Link>
 							</li>
-							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg max-md:bg-green-600/50 max-md:hover:bg-green-700/50 md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+							<li className="max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
 								<Link
 									to="/contact"
 									onClick={() => setShowMenu(!showMenu)}
@@ -95,6 +95,16 @@ export const Header = () => {
 								>
 									Contacto
 								</Link>
+							</li>
+							<li className="md:hidden max-md:transition max-md:hover:delay-50 max-md:hover:duration-300 max-md:hover:underline max-md:hover:decoration-4 max-md:hover:underline-offset-4 max-md:rounded-lg md:hover:scale-125 md:transition md:delay-100 md:duration-200 md:ease-in-out md:hover:shadow md:hover:shadow-gray-900 md:rounded-lg">
+								<button
+									type="button"
+									onClick={() => setShowMenu(!showMenu)}
+									className="block py-2 px-3 text-gray-900 bg-transparent md:px-4 md:py-3 dark:text-white dark:hover:text-white"
+									viewTransition
+								>
+									Cerrar menu
+								</button>
 							</li>
 						</ul>
 					</div>
