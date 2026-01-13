@@ -38,7 +38,7 @@ export const ProjectDetail = () => {
 					{/* Aqui va el video y el titulo */}
 					<section className="w-[90%] mx-auto p-5 z-40 border border-gray-900 bg-slate-50/50 rounded-lg ">
 						<img
-							src={proyecto.image}
+							src={proyecto.imageGif}
 							alt={`Aquí va la imagen de ${proyecto.title}`}
 							className="w-[90%] mx-auto rounded-lg"
 						/>

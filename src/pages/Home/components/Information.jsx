@@ -20,10 +20,9 @@ export const Information = () => {
 			<p className="tracking-normal align-middle leading-6 md:leading-8">
 				Soy desarrollador full stack, especializado en el desarrollo front-end y
 				back-end. Me apasiona el desarrollo, por lo que siempre estoy buscando
-				mejorar mis habilidades y conocimientos, sobre todo en aprender de
-				nuevas tecnologías, que me ayuden a mejorar como desarrollador y
-				entregar mejores resultados que satisfagan las necesidades de los
-				clientes y de los usuarios.
+				mejorar mis habilidades y conocimientos, sobre todo en aprender	nuevas tecnologías, 
+				que me ayuden a mejorar como desarrollador y entregar mejores resultados que 
+				satisfagan las necesidades de los clientes y de los usuarios.
 			</p>
 		</div>
 	);

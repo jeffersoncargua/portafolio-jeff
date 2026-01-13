@@ -12,8 +12,8 @@ export const Projects = () => {
 		//setLoading(true);
 		const result = await useFetch();
 		if (result !== null) {
-			setProjectsReactNet(result.slice(0, 2));
-			setProjectsReact(result.slice(2));
+			setProjectsReactNet(result.slice(0, 3));
+			setProjectsReact(result.slice(3));
 		}
 		//setLoading(false);
 	}, []);

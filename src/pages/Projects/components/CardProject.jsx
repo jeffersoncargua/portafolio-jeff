@@ -25,6 +25,7 @@ export const CardProject = ({ item }) => {
 						<div className="w-full mx-auto flex flex-col items-center space-y-2">
 							<img
 								src={item.image}
+								//C:\Users\Juan Medina\Desktop\Portafolio\portafolio-jeff\src\assets\Portada Calendario.png
 								alt={item.title}
 								className="w-full grayscale rounded-t-lg object-contain border-b"
 							/>
