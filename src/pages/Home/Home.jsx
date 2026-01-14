@@ -6,6 +6,7 @@ export const Home = () => {
 		<div className="w-[90%] flex flex-col justify-center items-center gap-y-2 md:gap-y-10 min-h-full mx-auto md:mt-10">
 			<div className="my-10 z-40">
 				<label
+					translate="no"
 					htmlFor="Welcome"
 					className="text-2xl md:text-5xl font-bold text-center"
 				>
