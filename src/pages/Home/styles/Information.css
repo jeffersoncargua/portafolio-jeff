@@ -1,16 +1,38 @@
 .information::before {
 	content: "";
 	position: absolute;
-	height: 550px;
+	height: 650px;
 	width: 80px;
 	background: #fff;
 	left: -150px;
-	top: -80px;
+	top: -90px;
 	transform: rotate(37deg);
 	transition: all 0.5s;
 	opacity: 0.3;
+	z-index: -1;
 }
 
 .information:hover::before {
-	left: 100%;
+	left: 107%;
+}
+
+
+@media screen and (width <= 48rem){
+	.information::before{
+	content: "";
+	position: absolute;
+	height: 650px;
+	width: 50px;
+	background: #fff;
+	left: -160px;
+	top: -90px;
+	transform: rotate(37deg);
+	transition: all 0.5s;
+	opacity: 0.3;
+	z-index: -1;
+	}
+
+	.information:hover::before {
+	left: 95%;
+	}
 }

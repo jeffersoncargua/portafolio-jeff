@@ -54,7 +54,7 @@ export const CardProject = ({ item }) => {
 							<button
 								onClick={() => HandleClick(item)}
 								type="button"
-								className="w-full flex justify-end my-2 me-10 space-x-2 font-bold text-purple-900 hover:underline hover:underline-offset-2"
+								className="w-full flex justify-end my-2 me-10 space-x-2 font-bold text-purple-900 hover:underline hover:underline-offset-2 hover:cursor-pointer"
 							>
 								Ver Detalles
 								<svg

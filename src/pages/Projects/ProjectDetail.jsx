@@ -40,7 +40,7 @@ export const ProjectDetail = () => {
 						<img
 							src={proyecto.imageGif}
 							alt={`Aquí va la imagen de ${proyecto.title}`}
-							className="w-[90%] mx-auto rounded-lg"
+							className="w-[80%] md:w-[70%] mx-auto rounded-lg"
 						/>
 						<h3 className="text-center font-semibold mt-5">{proyecto.title}</h3>
 					</section>
