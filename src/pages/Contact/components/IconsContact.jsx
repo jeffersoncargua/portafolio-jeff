@@ -110,7 +110,7 @@ export const IconsContact = ({ iconType, color = "" }) => {
 				onMouseLeave={() => setIsClick(false)}
 				onClick={() => HandleClick()}
 				data-tooltip-id={iconType}
-				className={`w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full flex justify-center items-center bg-amber-50/70 border-2 border-amber-100 transition delay-300 duration-700 easi-in-out ${!isClick ? "md:group-hover:animate-bounce" : "animate-none"} `}
+				className={`w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full flex justify-center items-center bg-amber-50/70 border-2 border-amber-100 transition delay-300 duration-700 easi-in-out ${!isClick ? "md:group-hover:animate-bounce" : "md:animate-none"} `}
 			>
 				{/*En este apartado se muestra el icono de las redes de contacto */}
 				{icons[iconType] && icons[iconType]}
