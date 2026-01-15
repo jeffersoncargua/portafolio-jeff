@@ -122,7 +122,7 @@ export const IconsContact = ({ iconType, color = "" }) => {
 	}, [isClick, iconType, HandleCopy]);
 
 	return (
-		<div className="z-50 group">
+		<div className="z-20 group">
 			{/* Esta boton es para pantallas grandes hasta el punto de ruptura en md */}
 			<button
 				type="button"

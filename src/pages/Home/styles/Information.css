@@ -36,3 +36,23 @@
 	left: 95%;
 	}
 }
+
+@media screen and (width <= 40rem){
+	.information::before{
+	content: "";
+	position: absolute;
+	height: 850px;
+	width: 50px;
+	background: #fff;
+	left: -180px;
+	top: -90px;
+	transform: rotate(37deg);
+	transition: all 0.5s;
+	opacity: 0.3;
+	z-index: -1;
+	}
+
+	.information:hover::before {
+	left: 95%;
+	}
+}
