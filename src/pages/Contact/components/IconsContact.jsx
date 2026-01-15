@@ -67,11 +67,11 @@ export const IconsContact = ({ iconType, color = "" }) => {
 	//Mensajes que se muestran cuando son pantallas pequeñas
 	const messageToolTipSmall = {
 		facebook:
-			"Presiona el botón para direccionarte a mi perfil de Facebook.",
-		gmail: "Presiona el botón para copiar mi correo electrónico.",
+			"Presiona dos veces el botón para direccionarte a mi perfil de Facebook.",
+		gmail: "Presiona dos veces el botón para copiar mi correo electrónico.",
 		linkedin:
-			"Presiona el botón para direccionarte a mi perfil de Linkedin.",
-		whatsapp: "Presiona el botón para direccionarte a mi WhatsApp.",
+			"Presiona dos veces el botón para direccionarte a mi perfil de Linkedin.",
+		whatsapp: "Presiona dos veces el botón para direccionarte a mi WhatsApp.",
 	};
 
 	const url = {
@@ -103,6 +103,24 @@ export const IconsContact = ({ iconType, color = "" }) => {
 		}
 	}, [isClick, iconType, HandleCopy]);
 
+	const HandleTouch = useCallback(() => {
+		if (isClick) {
+			setIsClick(!isClick);
+		} else {
+			setIsClick(!isClick);
+		}
+	}, [isClick]);
+
+	const HandleDoubleClick = useCallback(() => {
+		if (isClick) {
+			iconType !== "gmail" && window.open(url[iconType], "_blanck");
+			iconType === "gmail" && HandleCopy();
+			setIsClick(false);
+		} else {
+			setIsClick(true);
+		}
+	}, [isClick, iconType, HandleCopy]);
+
 	return (
 		<div className="z-50 group">
 			{/* Esta boton es para pantallas grandes hasta el punto de ruptura en md */}
@@ -119,7 +137,8 @@ export const IconsContact = ({ iconType, color = "" }) => {
 			{/* Esta boton es para pantallas pequeñas */}
 			<button
 				type="button"
-				onClick={() => HandleClick()}
+				onClick={() => HandleTouch()}
+				onDoubleClick={() => HandleDoubleClick()}
 				data-tooltip-id={iconType}
 				className={`w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full flex md:hidden justify-center items-center bg-amber-50/70 border-2 border-amber-100 transition delay-300 duration-700 easi-in-out`}
 			>
